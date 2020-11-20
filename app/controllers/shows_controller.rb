@@ -5,8 +5,8 @@ class ShowsController < ApplicationController
   end
 
   def new
-    city = City.find_by(id: params[:city_id])
-    @show = city.shows.new()
+    @city = City.find_by(id: params[:city_id])
+    @show = @city.shows.new()
   end
 
   def create
