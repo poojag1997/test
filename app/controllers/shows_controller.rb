@@ -1,7 +1,7 @@
 class ShowsController < ApplicationController
 
   def index
-    
+    @show = Show.all
   end
 
   def new
